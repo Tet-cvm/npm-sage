@@ -1,5 +1,5 @@
-export function abcText() {
-  console.log('abcText')
-}
+import welcome from './welcome';
 
-export default abcText;
+export default {
+  welcome
+}

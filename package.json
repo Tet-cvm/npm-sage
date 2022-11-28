@@ -2,14 +2,25 @@
   "name": "sage-utils",
   "version": "1.0.0",
   "description": "common js",
-  "main": "scr/index.js",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --mode=development",
+    "build": "webpack --mode=production"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Tet-cvm/sage-utils.git"
+  },
+  "dependencies": {
+    "webpack": "^5.75.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.0.0"
+  }
 }
