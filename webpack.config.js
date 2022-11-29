@@ -20,8 +20,19 @@ module.exports = {
         include: /\.min\.js$/, // 匹配min.js结尾的文件进行压缩
       })
     ]
+  },
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
   }
-
-
-
 }

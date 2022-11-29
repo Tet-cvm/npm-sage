@@ -2,15 +2,15 @@
   "name": "sage-utils",
   "version": "1.0.1",
   "description": "common js",
-  "main": "index.js",
+  "main": "src/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
     "serve": "webpack serve",
     "watch": "webpack --watch",
-    "build": "webpack --progress",
-    "build111": "webpack"
+    "test": "webpack --progress",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +21,12 @@
   },
   "dependencies": {
     "clean-webpack-plugin": "^4.0.0",
-    "webpack": "^5.75.0",
     "webpack-cli": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "webpack": "^5.75.0"
   }
 }
