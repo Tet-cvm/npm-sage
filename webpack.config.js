@@ -1,12 +1,27 @@
-const path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'none',
   entry: {
-    app: './src/index.js',
+    'index': './src/index.js',
+    'lunar': './src/weird/lunar.js',
+    'calendar': './src/weird/calendar.js',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js',
+    filename: '[name].js',
+    library: 'sageUtils', // 指定库的全局变量
+    libraryTarget: 'umd', // 支持库的引入方式
+    libraryExport: 'default' // 默认道出
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({ // webpack4之后，mode=production时默认开启压缩
+        include: /\.min\.js$/, // 匹配min.js结尾的文件进行压缩
+      })
+    ]
   }
+
+
+
 }
