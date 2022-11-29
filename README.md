@@ -1,4 +1,4 @@
-# Install
+## Install
 ```bash
 $ npm install sage-utils
 
@@ -23,7 +23,7 @@ const a = new Calendar();
 ```
 
 
-# Classify
-src/usual 常用函数
-src/usage 备用函数
+## Classify
+src/usual 常用函数  
+src/usage 备用函数  
 src/weird 其他函数/类
