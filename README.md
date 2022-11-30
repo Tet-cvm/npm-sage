@@ -17,11 +17,17 @@ import lunar from 'sage-utils/dist/lunar';
 
 lunar()
 
-import Calendar from 'sage-utils/dist/calendar';
-const a = new Calendar();
-      a.ggg();
-```
 
+// 日历 - 阴历节气
+import Calendar from 'sage-utils/dist/calendar';
+
+const calen = new Calendar();
+const year = calen._getYear(); // 获取当前年
+const month = calen._getMonth(); // 获取当前月
+const current = calen._initial(); // 初始化当前月份数据
+const appoint = calen._library(2019, 10); // 初始化指定年月数据
+
+```
 
 ## Classify
 src/usual 常用函数  
