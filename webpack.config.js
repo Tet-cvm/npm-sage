@@ -5,7 +5,7 @@ module.exports = {
   entry: {
     'index': './src/index.js',
     'lunar': './src/weird/lunar.js',
-    'calendar': './src/weird/calendar.js',
+    'Calendar': './src/weird/calendar.js',
   },
   output: {
     filename: '[name].js',

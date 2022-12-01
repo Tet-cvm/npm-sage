@@ -148,9 +148,7 @@ class Calendar {
         }
       }
     }
-
     return this.calendarData;
-
   }
   _festival(month, day, lunarMonth, lunarDay) {
     let fest = this.sFestival[String(this._double(month)) + String(this._double(day))];
@@ -372,7 +370,6 @@ class Calendar {
         --i;
         --monCyl;
       }
-
     }
 
     if (offset < 0) {
