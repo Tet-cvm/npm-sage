@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="module">
+    import { VerifyMobile, VerifyEmail, VerifyCard } from '../../src/usual/verify.js'
+    console.log(VerifyMobile(13601880011), '手机号验证')
+    console.log(VerifyEmail('13601880011@163.com'), '邮箱验证')
+    console.log(VerifyCard('450922199604103679'), '身份证验证')
+  </script>
+</body>
+</html>

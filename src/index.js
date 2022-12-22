@@ -1,11 +1,21 @@
-// 常用函数
-import { name, age } from './usual/abc';
-import sex from './usual/efg';
-// 备用函数
-import welcome from './usage/welcome';
+import Request from './usual/request';
+import Inject from './usual/inject';
+import {
+  Debounce, Throttle,
+  UrlParam, StrParam,
+  SetItem, GetItem, DelItem,
+  SetCookie, GetCookie, DelCookie,
+  IsWechat, IsSafari, IsIos, IsMobile,
+} from './usual/basics';
+import { VerifyMobile, VerifyEmail, VerifyCard } from './usual/verify';
 
 export default {
-  name, age,
-  sex,
-  welcome,
+  Request,
+  Inject,
+  Debounce, Throttle,
+  UrlParam, StrParam,
+  SetItem, GetItem, DelItem,
+  SetCookie, GetCookie, DelCookie,
+  IsWechat, IsSafari, IsIos, IsMobile,
+  VerifyMobile, VerifyEmail, VerifyCard,
 }

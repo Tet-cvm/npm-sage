@@ -4,8 +4,9 @@ module.exports = {
   mode: 'none',
   entry: {
     'index': './src/index.js',
+    'loader': './src/usage/loader.js',
+    'calendar': './src/weird/calendar.js',
     'lunar': './src/weird/lunar.js',
-    'Calendar': './src/weird/calendar.js',
   },
   output: {
     filename: '[name].js',

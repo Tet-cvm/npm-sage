@@ -56,17 +56,17 @@ class Calendar {
       '1225': '圣诞节'
     }
   }
-  _getYear() {
+  getYear() {
     return this.year;
   }
-  _getMonth() {
+  getMonth() {
     return this.month;
   }
-  _initial() {
-    let data = this._library(this.year, this.month);
+  initial() {
+    let data = this.library(this.year, this.month);
     return data;
   }
-  _library(year, month) {
+  library(year, month) {
     let first = new Date(year, month, 1); // 当月第一天日期
     let firstWeek = first.getDay(); // 公历当月1号星期几
     let currentNumber = this._days(year, month); // 当月总天数

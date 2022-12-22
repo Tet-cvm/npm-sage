@@ -6,7 +6,7 @@
     "react",
     "utils"
   ],
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
@@ -23,6 +23,8 @@
     "url": "git://github.com/Tet-cvm/sage-utils.git"
   },
   "dependencies": {
+    "axios": "^1.2.1",
+    "qs": "^6.11.0",
     "webpack-cli": "^5.0.0"
   },
   "devDependencies": {

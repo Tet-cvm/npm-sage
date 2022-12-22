@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="module">
+    import Calendar from '../../src/weird/calendar.js'
+    const calen = new Calendar();
+    const year = calen.getYear(); // 获取当前年
+    const month = calen.getMonth(); // 获取当前月
+    const current = calen.initial(); // 初始化当前月份数据
+    const appoint = calen.library(2022, 11); // 初始化指定年月数据
+    console.log(year, '@@ year',)
+    console.log(month, '@@ month',)
+    console.log(current, '@@ current',)
+    console.log(appoint, '@@ appoint',)
+  </script>
+</body>
+</html>

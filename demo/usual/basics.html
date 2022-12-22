@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="module">
+    import {
+      Debounce, Throttle,
+      UrlParam, StrParam,
+      SetItem, GetItem, DelItem,
+      SetCookie, GetCookie, DelCookie,
+      IsWechat, IsSafari, IsIos, IsMobile,
+    } from '../../src/usual/basics.js'
+    
+    // 防抖
+    const button1 = document.createElement('button');
+    const text1 = document.createTextNode('防抖');
+    button1.appendChild(text1);
+
+    button1.onclick = Debounce(() => {
+      console.log('防抖')
+    })
+    document.body.appendChild(button1);
+
+    // 节流
+    const button2 = document.createElement('button');
+    const text2 = document.createTextNode('节流');
+    button2.appendChild(text2);
+    button2.onclick = Throttle(() => {
+      console.log('节流')
+    })
+    document.body.appendChild(button2);
+
+    console.log(UrlParam('name'), '@@ UrlParam')
+    console.log(StrParam('http://baidu.com?name=sage', 'name'), '@@ StrParam')
+
+    SetItem('name', 123);
+    console.log(GetItem('name'))
+    DelItem('name')
+
+    SetCookie('Jon', 456, 10)
+    console.log(GetCookie('Jon'))
+
+    console.log(IsWechat())
+    console.log(IsSafari())
+    console.log(IsIos())
+    console.log(IsMobile())
+
+  </script>
+</body>
+</html>

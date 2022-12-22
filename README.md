@@ -6,26 +6,81 @@ $ yarn add sage-utils
 ```
 
 ```javascript
-import { name, age, sex, welcome } from 'sage-utils';
+// 常用函数
+import {
+  Request,
+  Inject,
+  Debounce, Throttle,
+  UrlParam, StrParam,
+  SetItem, GetItem, DelItem,
+  SetCookie, GetCookie, DelCookie,
+  IsWechat, IsSafari, IsIos, IsMobile,
+  VerifyMobile, VerifyEmail, VerifyCard,
+} from 'sage-utils';
 
-console.log(name('lxm'))
-console.log(age(12))
-console.log(sex('male'))
-welcome();
+Request().then(res => {
+  console.log(res)
+}).catch(err => {
+  console.log(err)
+})
 
-import lunar from 'sage-utils/dist/lunar';
+Inject('./inject.js').then(res => {
+  console.log(res)
+}).catch(err => {
+  console.log(err)
+})
 
-lunar()
+const func = Debounce(fn, 1000)
+const func = Throttle(fn, 3000)
 
+VerifyMobile(13601880011)
+VerifyEmail('13601880011@163.com')
+VerifyCard('450922199604103679')
+
+UrlParam('name')
+StrParam('http://baidu.com?name=sage', 'name')
+
+SetItem('name', 123);
+GetItem('name')
+DelItem('name')
+
+SetCookie('Jon', 456, 10)
+GetCookie('Jon')
+
+if (IsWechat()) {
+  //微信 
+}
+if (IsSafari()) {
+  // Safari浏览器
+}
+if (IsIos()) {
+  // ios系统
+}
+if (IsMobile()) {
+  // 移动端
+}
+
+// 异步加载资源
+import Loader from 'sage-utils/dist/loader';
+
+Loader().then(res => {
+  console.log(res)
+}).catch(err => {
+  console.log(err)
+})
 
 // 日历 - 阴历节气
 import Calendar from 'sage-utils/dist/calendar';
 
 const calen = new Calendar();
-const year = calen._getYear(); // 获取当前年
-const month = calen._getMonth(); // 获取当前月
-const current = calen._initial(); // 初始化当前月份数据
-const appoint = calen._library(2019, 10); // 初始化指定年月数据
+const year = calen.getYear(); // 获取当前年
+const month = calen.getMonth(); // 获取当前月
+const current = calen.initial(); // 初始化当前月份数据
+const appoint = calen.library(2019, 10); // 初始化指定年月数据
+
+import lunar from 'sage-utils/dist/lunar';
+
+lunar()
 
 ```
 
