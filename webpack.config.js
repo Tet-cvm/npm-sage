@@ -7,6 +7,7 @@ module.exports = {
     'loader': './src/usage/loader.js',
     'calendar': './src/weird/calendar.js',
     'lunar': './src/weird/lunar.js',
+    'container': './src/public/container.js',
   },
   output: {
     filename: '[name].js',

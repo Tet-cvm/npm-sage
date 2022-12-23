@@ -1,5 +1,7 @@
 /**
  * 公共函数
+ * @SeaScreen 刘海屏
+ * 
  * @Debounce  防抖
  * @Throttle  节流
  * 
@@ -19,6 +21,27 @@
  * @IsIos     手机是否ios系统
  * @IsMobile  pc端还是移动端
 **/
+
+function SeaScreen() {
+  if (
+    // iphoneX
+    (/iphone/gi.test(window.navigator.userAgent) && window.devicePixelRatio === 3 && window.screen.width === 375 && window.screen.height === 812) ||
+    // iphoneXR
+    (/iphone/gi.test(window.navigator.userAgent) && window.devicePixelRatio === 2 && window.screen.width === 414 && window.screen.height === 896) ||
+    // iphoneXS Max
+    (/iphone/gi.test(window.navigator.userAgent) && window.devicePixelRatio === 3 && window.screen.width === 414 && window.screen.height === 896) ||
+    // iphone12/13 mini
+    (/iphone/gi.test(window.navigator.userAgent) && window.devicePixelRatio === 3 && window.screen.width === 375 && window.screen.height === 812) ||
+    // iphone12/13 Pro
+    (/iphone/gi.test(window.navigator.userAgent) && window.devicePixelRatio === 3 && window.screen.width === 390 && window.screen.height === 844) ||
+    // iphone12/13 Pro Max
+    (/iphone/gi.test(window.navigator.userAgent) && window.devicePixelRatio === 3 && window.screen.width === 428 && window.screen.height === 926)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 let timeout = 0; // 暂时这样吧
 function Debounce(func, wait = 1000) {
@@ -137,6 +160,7 @@ function IsMobile() {
 }
 
 export {
+  SeaScreen,
   Debounce, Throttle,
   UrlParam, StrParam,
   SetItem, GetItem, DelItem,

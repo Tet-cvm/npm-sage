@@ -9,12 +9,15 @@
 <body>
   <script type="module">
     import {
+      SeaScreen,
       Debounce, Throttle,
       UrlParam, StrParam,
       SetItem, GetItem, DelItem,
       SetCookie, GetCookie, DelCookie,
       IsWechat, IsSafari, IsIos, IsMobile,
     } from '../../src/usual/basics.js'
+
+    console.log(SeaScreen(), '@@ 刘海屏')
     
     // 防抖
     const button1 = document.createElement('button');

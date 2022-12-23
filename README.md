@@ -10,12 +10,14 @@ $ yarn add sage-utils
 import {
   Request,
   Inject,
+  SeaScreen,
   Debounce, Throttle,
   UrlParam, StrParam,
   SetItem, GetItem, DelItem,
   SetCookie, GetCookie, DelCookie,
   IsWechat, IsSafari, IsIos, IsMobile,
   VerifyMobile, VerifyEmail, VerifyCard,
+  DateFormat,
 } from 'sage-utils';
 
 Request().then(res => {
@@ -29,6 +31,8 @@ Inject('./inject.js').then(res => {
 }).catch(err => {
   console.log(err)
 })
+
+SeaScreen()
 
 const func = Debounce(fn, 1000)
 const func = Throttle(fn, 3000)
@@ -60,6 +64,12 @@ if (IsMobile()) {
   // 移动端
 }
 
+console.log(DateFormat('YYYY年MM月DD日 hh小时mm分ss秒'))
+console.log(DateFormat('YYYY年MM月DD日'))
+console.log(DateFormat('DD/MM/YYYY'))
+console.log(DateFormat('YYYYMMDD'))
+console.log(DateFormat('YYYY-MM-DD hh:mm:ss'))
+
 // 异步加载资源
 import Loader from 'sage-utils/dist/loader';
 
@@ -88,3 +98,4 @@ lunar()
 src/usual 常用函数  
 src/usage 备用函数  
 src/weird 其他函数/类
+src/public 公共组件
